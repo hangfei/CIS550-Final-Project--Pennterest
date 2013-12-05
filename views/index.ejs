@@ -1,0 +1,33 @@
+<% layout('layout') -%>
+
+<% if (!user) { %>
+
+  <div class="hero-unit">
+    <h1>Welcome Pennterest</h1>
+    <p>CIS550 Project </p>
+    <p>
+      <a class="btn btn-primary btn-large" href="/login"> Login</a>
+      <a class="btn btn-large" href="/reg"> Register </a>
+    </p>
+  </div>
+  
+<% } else { %>
+
+  <div class="row"> 
+    <div class="span4"> 
+      <h2>Hangfei</h2>
+      <p>  Under Construction.  </p>
+    </div>
+    <div class="span4"> 
+      <h2>Yang Kang</h2>
+      <p>
+      Wonderful Day.
+      </p>
+    </div>
+    <div class="span4">
+      <h2>Man Li</h2>
+      <p> Hello world! </p>
+    </div>
+  </div>
+  
+<% } %>
