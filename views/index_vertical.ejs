@@ -1,0 +1,107 @@
+<% layout('layout') -%>
+<% if (!user) { %>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">
+          <img src="http://www.admissionassurance.com/blog/wp-content/uploads/2011/05/UPenn-Admissions-Interview.png" alt="some_text">
+        </div>
+        <div class="span3">
+           <h3> Feature Story </h3>
+           <h1> Recommendation Content </h1>
+           <p> 毕竟西湖六月中，风光不与四时同。
+               接天莲叶无穷碧，映日荷花别样红. 
+           </p>
+           <p>Since 2006, there have been more than 200 mass killings in the U.S. 
+              The circumstances of those killing–the people who commit them.
+           </p>
+           <p>
+             <a class="btn btn-primary btn-large" href="/login"> Read</a>
+           </p>         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+        <div class="span12"> 
+          <img src="http://www.nju.edu.cn/ecms/attach/10890.jpg" style="width: 100%;" alt="some_text">
+          <p> This is not summer. It's winter. </p>
+          <hr>
+        </div>
+        <div class="span12"> 
+          <img src="http://www.nju.edu.cn/themes/10646/qiu/images/main_14_3.jpg" alt="some_text">
+        </div>  
+    </div>
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <div class="span12"> 
+        <h2>Hangfei</h2>
+        <img src="http://www.nju.edu.cn/themes/10646/qiu/images/main_14_3.jpg" alt="some_text">
+        <p>  Under Construction.  </p>
+      </div>
+      <div class="span12"> 
+        <h2>Yang Kang</h2>
+        <img src="http://www.nju.edu.cn/ecms/attach/10887.jpg" style="width: 100%;" alt="NJU">
+        <p> Wonderful Day. </p>
+      </div>
+      <div class="span12">
+        <h2>Man Li</h2>
+        <p> Hello world! </p>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="span12"> 
+        <h2>James</h2>
+        <img src="http://www.nju.edu.cn/ecms/attach/10893.jpg" alt="some_text">
+        <p>  Under Construction.  </p>
+      </div>
+      <div class="span12"> 
+        <h2>Jim</h2>
+        <img src="http://www.nju.edu.cn/ecms/attach/10894.jpg" alt="NJU">
+        <p> Wonderful Day. </p>
+      </div>
+    </div>    
+  </div>
+</div>  
+<hr>
+  <div class="row"> 
+    <div class="span4"> 
+      <h2>Hangfei</h2>
+      <p>  Under Construction.  </p>
+      <img src="http://www.nju.edu.cn/themes/10646/qiu/images/main_14_3.jpg" alt="some_text">
+    </div>
+    <div class="span4">
+      <div class="container">
+          <div class="row-fluid">
+              <div class="span2" style="padding-right:20px; border-right: 1px solid #ccc;">
+                  <p>Some Contents Here...</p>
+              </div>
+              <div class="span2">
+                  <p>Some Contents Here...</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="span4">
+      <h2>Man Li</h2>
+      <p> Hello world! </p>
+    </div>
+  </div>
+    
+<% } else { %>
+  <div class="hero-unit">
+    <h1>Welcome Pennterest</h1>
+    <p>CIS550 Project </p>
+    <p>
+      <img src="http://www.nju.edu.cn/ecms/attach/10887.jpg" alt="NJU"> 
+      <a class="btn btn-primary btn-large" href="/login"> Login</a>
+      <a class="btn btn-large" href="/reg"> Register </a>
+    </p>
+  </div>
+  <%- partial('say') %>
+  <%- partial('posts') %>
+<% } %>
+
