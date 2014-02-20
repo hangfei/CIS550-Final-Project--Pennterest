@@ -1,0 +1,38 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #6d0e0e
+background-color = #fafafa
+.block
+  position absolute
+  background #eee
+  padding 50px
+  width 200px
+  border 1px solid #ddd
+  -webkit-transition: all 1s ease-in-out
+  -moz-transition: all 1s ease-in-out
+  -o-transition: all 1s ease-in-out
+  -ms-transition: all 1s ease-in-out
+  transition: all 1s ease-in-out
+  img 
+    width: auto;
+    height : auto;
+    max-height: 120%
+    max-width: 120%
+    

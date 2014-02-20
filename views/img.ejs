@@ -1,0 +1,47 @@
+<% layout('layout') -%>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <% img.forEach(function(post, index) { %>
+        <% if (index % 3 == 0)  { %>  
+          <div class="span12">
+            <h2><a href="/u/<%= post.user %>"><%= post.NAME %></a> Board</h2>
+            <p><small><%= post.NAME %></small></p>
+            <img src="data:image/jpeg;base64,<%=post%>" style = "width:100%" />
+          </div>
+        <%} %>
+      <%}) %>
+      
+    </div>
+
+
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <% img.forEach(function(post, index) { %>
+        <% if (index % 3 == 1)  { %>  
+          <div class="span12">
+            <h2><a href="/u/<%= post.user %>"><%= post.NAME %></a> Board</h2>
+            <p><small><%= post.NAME %></small></p>
+            <img src="data:image/jpeg;base64,<%=post%>" style = "width:100%" />
+          </div>
+        <%} %>
+      <%}) %>
+    </div>
+    
+    
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <% img.forEach(function(post, index) { %>
+        <% if (index % 3 == 2)  { %>  
+          <div class="span12">
+            <h2><a href="/u/<%= post.user %>"><%= post.NAME %></a> Board</h2>
+            <p><small><%= post.NAME %></small></p>
+            <img src="data:image/jpeg;base64,<%=post%>" style = "width:100%" />
+          </div>
+        <%} %>
+      <%}) %>
+    </div>
+    
+    
+    
+  </div>
+</div>

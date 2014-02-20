@@ -1,0 +1,50 @@
+<% layout('layout') -%>
+ <div class="jumbotron">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+					<% if (posts_2[0].CACHED == '1') {%>
+						<a href="/cache/?key=<%=posts_2[0].CONTENTID %>">
+						<img src="/cache/?key=<%=posts_2[0].CONTENTID%>" style = "width:100%" />
+						</a>
+					<% } else { %>
+						<a href="<%= posts_2[0].URL %>">
+						<img src="<%=posts_2[0].URL%>" style = "width:100%" />
+						</a>
+					<% } %>
+        </div>
+        <div class="span3">
+					<% if (posts_2[1].CACHED == '1') {%>
+						<a href="/cache/?key=<%=posts_2[1].CONTENTID %>">
+						<img src="/cache/?key=<%=posts_2[1].CONTENTID%>" style = "width:100%" />
+						</a>
+					<% } else { %>
+						<a href="<%= posts_2[1].URL %>">
+						<img src="<%=posts_2[1].URL%>" style = "width:100%" />
+						</a>
+					<% } %>
+        </div>
+        <div class="span3">
+					<% if (posts_2[2].CACHED == '1') {%>
+						<a href="/cache/?key=<%=posts_2[2].CONTENTID %>">
+						<img src="/cache/?key=<%=posts_2[2].CONTENTID%>" style = "width:100%" />
+						</a>
+					<% } else { %>
+						<a href="<%= posts_2[2].URL %>">
+						<img src="<%=posts_2[2].URL%>" style = "width:100%" />
+						</a>
+					<% } %>
+        </div>
+        <div class="span3">
+           <h3> Welcome Pennterest</h3>
+           <h1> Recommendation</h1>
+           <p>
+             <a class="btn btn-primary btn-large" href="/login"> More </a>
+           </p>         
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- partial('search') %>
+  <%- partial('posts') %>
+

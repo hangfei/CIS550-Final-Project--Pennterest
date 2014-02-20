@@ -1,71 +1,126 @@
 <% layout('layout') -%>
-
 <% if (!user) { %>
-        <hr>
-  <div class="hero-unit">
-
-    
+  <div class="jumbotron">
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span10">
-          <img src="http://www.nju.edu.cn/themes/10646/qiu/images/main_14_3.jpg" alt="some_text">
+        <div class="span9">
+          <img src="http://www.admissionassurance.com/blog/wp-content/uploads/2011/05/UPenn-Admissions-Interview.png" alt="some_text">
         </div>
-        <div class="span2">
-           <p> This is recommendation. </p>
+        <div class="span3">
+           <h3> Feature Story </h3>
+           <h1> Welcome to Pennterest </h1>
+           <p> 毕竟西湖六月中，风光不与四时同。
+               接天莲叶无穷碧，映日荷花别样红. 
+           </p>
            <p>
-            <a class="btn btn-primary btn-large" href="/login"> Login</a>
-            <a class="btn btn-large" href="/reg"> Register </a>
+             <a class="btn btn-primary btn-large" href="/login"> Read</a>
            </p>         
         </div>
       </div>
+    </div>
+  </div>
 
+  <hr>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <% img.forEach(function(post, index) { %>
+        <% if (index % 3 == 0)  { %>  
+          <div class="span12">
+            <h2><a href="/b/<%= post.BOARDNAME %>"><%= post.BOARDNAME %></a></h2>
+            <% if (post.CACHED == '1') {%>
+							<a href="/cache/?key=<%=post.CONTENTID %>">
+              <img src="/cache/?key=<%=post.CONTENTID%>" style = "width:100%" />
+							</a>
+            <% } else { %>
+							<a href="<%=post.URL%>">
+              <img src="<%=post.URL%>" style = "width:100%" />
+							</a>
+            <% } %>
+            <p align="right"><a href="/u/<%= post.USERNAME %>"><big><%= post.USERNAME %></big></a></p>
+            <hr>
+          </div>
+        <%} %>
+      <%}) %>
       
     </div>
 
+
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <% img.forEach(function(post, index) { %>
+        <% if (index % 3 == 1)  { %>  
+          <div class="span12">
+            <h2> <a href="/b/<%= post.BOARDNAME %>"><%= post.BOARDNAME %></a> </h2>
+            <% if (post.CACHED == '1') {%>
+							<a href="/cache/?key=<%=post.CONTENTID %>">
+              <img src="/cache/?key=<%=post.CONTENTID%>" style = "width:100%" />
+							</a>
+            <% } else { %>
+							<a href="<%=post.URL%>">
+              <img src="<%=post.URL%>" style = "width:100%" />
+							</a>
+            <% } %>
+            <p align="right"><a href="/u/<%= post.USERNAME %>"><big><%= post.USERNAME %></big></a></p>
+            <hr>
+          </div>
+        <%} %>
+      <%}) %>
+    </div>
+    
+    
+    <div class="span4" style="padding-right:40px; border-right: 1px solid #ccc;">
+      <% img.forEach(function(post, index) { %>
+        <% if (index % 3 == 2)  { %>  
+          <div class="span12">
+            <h2><a href="/b/<%= post.BOARDNAME %>"><%= post.BOARDNAME %></a></h2>
+            <% if (post.CACHED == '1') {%>
+							<a href="/cache/?key=<%=post.CONTENTID %>">
+              <img src="/cache/?key=<%=post.CONTENTID%>" style = "width:100%" />
+							</a>
+            <% } else { %>
+							<a href="<%=post.URL%>">
+              <img src="<%=post.URL%>" style = "width:100%" />
+							</a>
+            <% } %>
+            <p align="right"><a href="/u/<%= post.USERNAME %>"><big><%= post.USERNAME %></big></a></p>
+            <hr>
+          </div>
+        <%} %>
+      <%}) %>
+    </div>
+    
+    
+    
   </div>
-          <hr>
-  <div class="row"> 
-    <div class="span4"> 
-      <h2>Hangfei</h2>
-      <p>  Under Construction.  </p>
-      <img src="http://www.nju.edu.cn/themes/10646/qiu/images/main_14_3.jpg" alt="some_text">
-    </div>
-    <div class="span4"> 
-      <h2>Yang Kang</h2>
-      <p> Wonderful Day. </p>
-      <img src="http://www.nju.edu.cn/ecms/attach/10887.jpg" alt="NJU">
-    </div>
-    <div class="span4">
-      <h2>Man Li</h2>
-      <p> Hello world! </p>
-    </div>
-    <div class="span4"> 
-      <h2>James</h2>
-      <p>  Under Construction.  </p>
-      <img src="http://www.nju.edu.cn/themes/10646/qiu/images/main_14_3.jpg" alt="some_text">
-    </div>
-    <div class="span4"> 
-      <h2>Jim</h2>
-      <p> Wonderful Day. </p>
-      <img src="http://www.nju.edu.cn/ecms/attach/10887.jpg" alt="NJU">
-    </div>
-    <div class="span4">
-      <h2>Tom</h2>
-      <p> Hello world! </p>
-    </div>
-  </div>
+</div>
+
+<hr>
+     
+    
     
 <% } else { %>
-  <div class="hero-unit">
-    <h1>Welcome Pennterest</h1>
-    <p>CIS550 Project </p>
-    <p>
-      <img src="http://www.nju.edu.cn/ecms/attach/10887.jpg" alt="NJU"> 
-      <a class="btn btn-primary btn-large" href="/login"> Login</a>
-      <a class="btn btn-large" href="/reg"> Register </a>
-    </p>
+ <div class="jumbotron">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">   
+        </div>
+        <div class="span3">
+           <h3> Feature Story </h3>
+           <h1> Recommendation Content </h1>
+           <p> 毕竟西湖六月中，风光不与四时同。
+               接天莲叶无穷碧，映日荷花别样红. 
+           </p>
+           <p>Since 2006, there have been more than 200 mass killings in the U.S. 
+              The circumstances of those killing–the people who commit them.
+           </p>
+           <p>
+             <a class="btn btn-primary btn-large" href="/login"> Read</a>
+           </p>         
+        </div>
+      </div>
+    </div>
   </div>
-  <%- partial('say') %>
+  <%- partial('search') %>
   <%- partial('posts') %>
 <% } %>
 

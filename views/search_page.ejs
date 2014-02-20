@@ -1,0 +1,32 @@
+<% layout('layout') -%>
+ <div class="jumbotron">
+     <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <h3> Bing Search </h1>
+        </div>
+      </div>
+     </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+					<a href="<%= img_bing[0].MediaUrl %> ">
+          <img src="<%= img_bing[0].MediaUrl %> " style = "width:100%" />
+					</a>
+        </div>
+        <div class="span4">
+					<a href="<%= img_bing[1].MediaUrl %> ">
+          <img src="<%= img_bing[1].MediaUrl %> " style = "width:100%" />
+					</a>
+        </div>
+        <div class="span4">
+					<a href="<%= img_bing[2].MediaUrl %> ">
+          <img src="<%= img_bing[2].MediaUrl %> " style = "width:100%" />
+					</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- partial('search') %>
+  <%- partial('search_img') %>
+

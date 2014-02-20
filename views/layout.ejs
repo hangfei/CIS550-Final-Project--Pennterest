@@ -8,8 +8,15 @@
       body {
         padding-top: 60px;
         padding-bottom: 40px;
-    } 
+      } 
     </style>
+    <style>
+      a:link {color:#000000;}    /* unvisited link */
+      a:visited {color:#000000;} /* visited link */
+      a:hover {color:#000000;}   /* mouse over link */
+      a:active {color:#000000;}  /* selected link */
+    </style>
+
     <link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
@@ -24,20 +31,35 @@
         <a class="brand" href="/">PENNTEREST</a>
         <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Homepage</a></li>
-              <% if (!user) { %>
-                <li class=><a href="/login">Login</a></li>
-                <li><a href="/reg">Register</a></li>
+              <% if (1) { %>
+                <li class="active"><a href="/">Homepage</a></li>
+                <% if (!user) { %>
+                  <li ><a href="/login">Login</a></li>
+                  <li><a href="/reg">Register</a></li>
+                  <li><a href="/test_page">Test Page</a></li>
+                <% } else { %>
+                  <li><a href="/logout">Logout</a></li>
+                <% } %>
               <% } else { %>
-                <li><a href="/logout">Logout</a></li>
-              <% } %>
+                <li class="active"><a href="/">Homepage</a></li>
+                <% if (!user) { %>
+                  <li ><a href="/login">Login</a></li>
+                  <li><a href="/reg">Register</a></li>
+                  <li><a href="/test_page">Test Page</a></li>
+                <% } else { %>
+                  <li><a href="/logout">Logout</a></li>
+                <% } %>              
+               <% } %>
+ 
+                        
+ 
             </ul>
         </div>
       </div>
     </div>
   </div>
     <div id="container" class="container">
-      <% if (success) { %>
+      <% if (success != "") { %>
         <div class="alert alert-success">
           <%= success %>
         </div>
